@@ -1,0 +1,56 @@
+[
+    {
+        "_id": "601f69bfa604b532e5862cb1",
+        "title": "Computer Science",
+        "description": "Computer science is the study of computers and computing as well as their theoretical and practical applications.",
+        "icon": "https://i.postimg.cc/d0XgnnFT/01.png"
+    },
+    {
+        "_id": "602f69bfa604b532e5862cb2",
+        "title": "Data Science",
+        "description": "Data science is an interdisciplinary field that uses scientific methods, processes, algorithms and systems.",
+        "icon": "https://i.postimg.cc/LX1wWf4Q/02.png"
+    },
+    {
+        "_id": "603f69bfa604b532e5862cb3",
+        "title": "Art & Design",
+        "description": "An Art & Design degree includes creating expressive artwork and the implemen- tation of industry-changing designs.",
+        "icon": "https://i.postimg.cc/L5k79p1z/03.png"
+    },
+    {
+        "_id": "609f69bfa604b532e5862cb9",
+        "title": "Academics",
+        "description": "An academic students get when they graduate from a university. It shows they successfully completed their courses.",
+        "icon": "https://i.postimg.cc/rFJb7qcT/09.png"
+    },
+    {
+        "_id": "605f69bfa604b532e5862cb5",
+        "title": "Marketing & Business",
+        "description": "Marketing & business refers to activities a company undertakes to promote the buying or selling of a product or service.",
+        "icon": "https://i.postimg.cc/jqyBQzFL/05.png"
+    },
+    {
+        "_id": "606f69bfa604b532e5862cb6",
+        "title": "Finance & Business",
+        "description": "Financing is the process of providing funds for business activities, making purchases, or investing.",
+        "icon": "https://i.postimg.cc/WbjC9hBS/06.png"
+    },
+    {
+        "_id": "607f69bfa604b532e5862cb7",
+        "title": "Health & Fitness",
+        "description": "Health means a person has good physical health, no injuries, diseases or issues, and good mental health and well being",
+        "icon": "https://i.postimg.cc/T3NsYQpH/07.png"
+    },
+    {
+        "_id": "608f69bfa604b532e5862cb8",
+        "title": "Music & Dance",
+        "description": "Dance needs music to set the mood, drop the beat, and create the motivation needed to start moving.",
+        "icon": "https://i.postimg.cc/VkkT82LC/08.png"
+    },
+    {
+        "_id": "604f69bfa604b532e5862cb4",
+        "title": "Happy Lifestyle",
+        "description": "Feeling of truly enjoying your life, and the desire to make the very best of it. It is the secret sauce that can help us be and do our best.",
+        "icon": "https://i.postimg.cc/0j1F1Qbk/04.png"
+    }
+]

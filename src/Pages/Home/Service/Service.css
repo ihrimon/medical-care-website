@@ -1,0 +1,12 @@
+.service-card{
+    background-color: rgba(221, 233, 236, 0.103);
+    border: 1px solid skyblue;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.service-card:hover{
+    color: black;
+    border: none;
+    box-shadow: 2px 2px 12px 2px #979b9c27;
+}

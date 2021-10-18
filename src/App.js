@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import './App.css';
 import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
 import Footer from './Pages/Footer/Footer';
@@ -11,7 +10,7 @@ import SignUp from './Pages/SignUp/SignUp';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Router>
         <Header></Header>
         <Switch>

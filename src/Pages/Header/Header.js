@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../images/logo.png'
 
 const Header = () => {
@@ -34,11 +34,8 @@ const Header = () => {
                                 <NavLink className="nav-link" activeStyle={activeStyle} to="/contact">Contact</NavLink>
                             </li>
                         </ul>
-                        <button className="btn btn-outline-success" type="submit" to="/signin">Sign In</button>
-                        <button className="btn btn-outline-success" type="submit" to="/signup">Sign Up</button>
-
-                        {/* <NavLink><button className="btn btn-outline-success" type="submit" to="/signin">Sign In</button></NavLink>
-                        <NavLink><button className="btn btn-outline-success" type="submit" to="/signup">Sign Up</button></NavLink> */}
+                        <Link to="/signin"><button className="btn btn-outline-success" type="submit" >Sign In</button></Link>
+                        <Link to="/signup"><button className="btn btn-outline-success" type="submit" >Sign Up</button></Link>
                     </div>
                 </div>
             </nav>

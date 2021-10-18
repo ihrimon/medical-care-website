@@ -6,6 +6,7 @@ import img3 from '../../../images/patient-3.png';
 const Testimonial = () => {
     return (
         <div className="container">
+            <h2 className="text-center">Testomonial</h2>
             <div className="row row-cols-4 row-cols-lg-12 justify-content-center g-2 g-lg-5">
                 <div className="col">
                     <div className="card w-18rem p-3 d-flex flex-column align-items-center">
