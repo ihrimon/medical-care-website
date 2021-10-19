@@ -1,0 +1,12 @@
+.bg-img{
+    background-image: linear-gradient(#64d4bcb7, #276cc0ef), url(../../images/banner.png); 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px;
+}
+
+.not-found{
+    font-size: 200px;
+}

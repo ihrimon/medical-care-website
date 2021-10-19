@@ -1,9 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import './NotFound.css';
 
 const NotFound = () => {
     return (
-        <div className="border py-5 my-5">
-            <h2>This is not found section.</h2>
+        <div className='bg-img'>
+            <div className="container">
+                <div className="text-light text-center ">
+                    <h1 className="not-found">404</h1>
+                    <h3>OPPS, SORRY WE CAN'T FIND THAT PAGE!</h3>
+                    <p>Either something went wrong or the page doesn't exist anymore.</p>
+                    <Link to="/home"><button className="btn btn-outline-light rounded-0 mt-3" type="submit" >Back to Homepage</button></Link>
+                </div>
+            </div>
         </div>
     );
 };

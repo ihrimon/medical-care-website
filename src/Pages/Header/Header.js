@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../images/logo.png'
+import { Button } from 'react-bootstrap';
+import logo from '../../images/logo.png';
+import useAuth from '../../Hooks/useAuth'
 
 const Header = () => {
+    const { user, logOut } = useAuth();
     const activeStyle = {
         fontWeight: "bold",
         color: "green"
@@ -31,11 +34,18 @@ const Header = () => {
                                 <NavLink className="nav-link" activeStyle={activeStyle} to="/about">About</NavLink>
                             </li>
                             <li className="nav-item">
+                                <NavLink className="nav-link" activeStyle={activeStyle} to="/doctors">Doctors</NavLink>
+                            </li>
+                            <li className="nav-item">
                                 <NavLink className="nav-link" activeStyle={activeStyle} to="/contact">Contact</NavLink>
                             </li>
                         </ul>
-                        <Link to="/signin"><button className="btn btn-outline-success" type="submit" >Sign In</button></Link>
-                        <Link to="/signup"><button className="btn btn-outline-success" type="submit" >Sign Up</button></Link>
+                        <small>{user?.displayName}</small>
+                        {user.displayName ?
+                            <button onClick={logOut} className="btn btn-outline-success ms-2">Sign Out</button> :
+                            <NavLink to="/sign-in"><button className="btn btn-success me-2" type="submit" >Sign In</button></NavLink>
+                        }
+
                     </div>
                 </div>
             </nav>

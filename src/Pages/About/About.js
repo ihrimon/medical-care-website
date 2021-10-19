@@ -1,10 +1,11 @@
 import React from 'react';
-import Doctors from './Doctors/Doctors';
+import Banner from './Banner/Banner';
+
 
 const About = () => {
     return (
-        <div>
-            <Doctors></Doctors>
+        <div id="#about">
+            <Banner></Banner>
         </div>
     );
 };

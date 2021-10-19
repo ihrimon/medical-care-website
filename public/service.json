@@ -1,56 +1,56 @@
 [
     {
-        "_id": "601f69bfa604b532e5862cb1",
-        "title": "Computer Science",
-        "description": "Computer science is the study of computers and computing as well as their theoretical and practical applications.",
-        "icon": "https://i.postimg.cc/d0XgnnFT/01.png"
+        "id": "1",
+        "title": "Dental Surgery",
+        "description": "Dental surgery is any of a number of medical procedures that involve artificially modifying dentition; in other words, surgery of the teeth, gums and jaw bones.",
+        "img": "https://i.ibb.co/Y3D9YzW/01.png"
     },
     {
-        "_id": "602f69bfa604b532e5862cb2",
-        "title": "Data Science",
-        "description": "Data science is an interdisciplinary field that uses scientific methods, processes, algorithms and systems.",
-        "icon": "https://i.postimg.cc/LX1wWf4Q/02.png"
+        "id": "2",
+        "title": "Cardiology",
+        "description": "Cardiology is the study and treatment of disorders of the heart and the blood vessels. A person with heart disease or cardiovascular disease may be referred to a cardiologist.",
+        "img": "https://i.ibb.co/tpGRcMV/02.png"
     },
     {
-        "_id": "603f69bfa604b532e5862cb3",
-        "title": "Art & Design",
-        "description": "An Art & Design degree includes creating expressive artwork and the implemen- tation of industry-changing designs.",
-        "icon": "https://i.postimg.cc/L5k79p1z/03.png"
+        "id": "3",
+        "title": "Neurology",
+        "description": "Neurologists are physicians who focus on abnormalities of the brain and central nervous system. They can conduct in-depth neurological examinations.",
+        "img": "https://i.ibb.co/q5W6bt3/09.png"
     },
     {
-        "_id": "609f69bfa604b532e5862cb9",
-        "title": "Academics",
-        "description": "An academic students get when they graduate from a university. It shows they successfully completed their courses.",
-        "icon": "https://i.postimg.cc/rFJb7qcT/09.png"
+        "id": "4",
+        "title": "Gynecologist",
+        "description": "A gynecologist is a doctor who specializes in female reproductive health. They diagnose and treat issues related to the female reproductive tract.",
+        "img": "https://i.ibb.co/tD7nkzS/03.png"
     },
     {
-        "_id": "605f69bfa604b532e5862cb5",
-        "title": "Marketing & Business",
-        "description": "Marketing & business refers to activities a company undertakes to promote the buying or selling of a product or service.",
-        "icon": "https://i.postimg.cc/jqyBQzFL/05.png"
+        "id": "5",
+        "title": "General Surgery",
+        "description": "General Surgery is a discipline of surgery having a central core of knowledge embracing anatomy, physiology, metabolism, immunology, nutrition, pathology, wound healing, shock",
+        "img": "https://i.ibb.co/gJzNhqY/04.png"
     },
     {
-        "_id": "606f69bfa604b532e5862cb6",
-        "title": "Finance & Business",
-        "description": "Financing is the process of providing funds for business activities, making purchases, or investing.",
-        "icon": "https://i.postimg.cc/WbjC9hBS/06.png"
+        "id": "6",
+        "title": "Laboratory Test",
+        "description": "A medical procedure that involves testing a sample of blood, urine, or other substance from the body. Laboratory tests can help determine a diagnosis, plan treatment, check to see if treatment is working, or monitor the disease over time.",
+        "img": "https://i.ibb.co/bN42ZhT/05.png"
     },
     {
-        "_id": "607f69bfa604b532e5862cb7",
-        "title": "Health & Fitness",
-        "description": "Health means a person has good physical health, no injuries, diseases or issues, and good mental health and well being",
-        "icon": "https://i.postimg.cc/T3NsYQpH/07.png"
+        "id": "7",
+        "title": "Eyes Care",
+        "description": "To take care of someone or something or take good care of them means to look after them. It is certainly normal for a mother to want to take care of her own",
+        "img": "https://i.ibb.co/4sGRhqN/06.png"
     },
     {
-        "_id": "608f69bfa604b532e5862cb8",
-        "title": "Music & Dance",
-        "description": "Dance needs music to set the mood, drop the beat, and create the motivation needed to start moving.",
-        "icon": "https://i.postimg.cc/VkkT82LC/08.png"
+        "id": "8",
+        "title": "Hematology",
+        "description": "Hematology is the science or study of blood, blood-forming organs and blood diseases. In the medical field, hematology includes the treatment of blood disorders and malignancies, including types of hemophilia, leukemia, lymphoma and sickle-cell anemia.",
+        "img": "https://i.ibb.co/vcqJvZF/07.png"
     },
     {
-        "_id": "604f69bfa604b532e5862cb4",
-        "title": "Happy Lifestyle",
-        "description": "Feeling of truly enjoying your life, and the desire to make the very best of it. It is the secret sauce that can help us be and do our best.",
-        "icon": "https://i.postimg.cc/0j1F1Qbk/04.png"
+        "id": "9",
+        "title": "Pediatrics",
+        "description": "Pediatrics (also spelled pediatrics or pediatrics) is the branch of medicine that involves the medical care of infants, children, and adolescents.",
+        "img": "https://i.ibb.co/k5J1CjY/08.png"
     }
 ]

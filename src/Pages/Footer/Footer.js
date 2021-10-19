@@ -1,13 +1,16 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import logo from '../../images/logo.png'
 
 const Footer = () => {
     return (
         <div className="footer">
-            <div className="bg-light mt-5 py-5">
+            <div className="bg-light py-5">
                 <div className="container d-flex flex-wrap text-start">
                     <div className="col-lg-3 col-6">
-                        <img src={logo} alt="" />
+                        <NavLink to="#headernpm i react-router-hash-link">
+                            <img src={logo} alt="" />
+                        </NavLink>
                         <p>Online learning gives educators an opportunity to reach students who may not be able to enroll.</p>
                     </div>
                     <div className="col-lg-3 col-6">

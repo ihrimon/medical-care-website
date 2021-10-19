@@ -1,44 +1,63 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import AuthProvider from './context/AuthProvider';
 import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
 import Footer from './Pages/Footer/Footer';
 import Header from './Pages/Header/Header';
+import AppointmentForm from './Pages/Home/Appointment/AppointmentForm/AppointmentForm';
+import Doctors from './Pages/Home/Doctors/Doctors/Doctors';
 import Home from './Pages/Home/Home';
+import ServiceDetail from './Pages/Home/ServiceDetail/ServiceDetail';
 import Services from './Pages/Home/Services/Services';
+import NotFound from './Pages/NotFound/NotFound';
 import SignIn from './Pages/SignIn/SignIn';
 import SignUp from './Pages/SignUp/SignUp';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
     <div>
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route path="/services">
-            <Services></Services>
-          </Route>
-          <Route path="/about">
-            <About></About>
-          </Route>
-          <Route path="/contact">
-            <Contact></Contact>
-          </Route>
-          <Route path="/signin">
-            <SignIn></SignIn>
-          </Route>
-          <Route path="/signup">
-            <SignUp></SignUp>
-          </Route>
-        </Switch>
-        <Footer></Footer>
-      </Router>
-
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/services">
+              <Services></Services>
+            </Route>
+            <PrivateRoute path="/service-detail/:serviceId">
+              <ServiceDetail></ServiceDetail>
+            </PrivateRoute>
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/contact">
+              <Contact></Contact>
+            </Route>
+            <Route path="/sign-in">
+              <SignIn></SignIn>
+            </Route>
+            <Route path="/sign-up">
+              <SignUp></SignUp>
+            </Route>
+            <Route path="/appointment-form">
+              <AppointmentForm></AppointmentForm>
+            </Route>
+            <PrivateRoute path="/doctors">
+              <Doctors></Doctors>
+            </PrivateRoute>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }
