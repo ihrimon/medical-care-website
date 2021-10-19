@@ -1,15 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Signin.css';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const SignIn = () => {
-    const {signInWithGoogle} = useAuth();
-
-    const handleSignIn = e=>{
-        console.log('registration will be added');
-        e.preventDefauld();
-    }
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const { signInWithGoogle, handleEmailChange,
+        handlePasswordChange, handleRegistration, error } = useAuth();
 
     return (
         <div className="container card w-50 my-5">
@@ -20,16 +18,17 @@ const SignIn = () => {
                     <button onClick={signInWithGoogle} className="btn btn-danger btn-gmail">Gmail</button>
                     <button className="btn btn-primary btn-github ">Github</button>
                     <p>or use your email account</p>
-                    <form onSubmit={handleSignIn}>
-                        <input type="text" name="Name" id="" className="input-field"
-                            placeholder="Name" />
+                    <form onSubmit={handleRegistration}>
                         <input
-                            type="email" name="email" id="" className="input-field"
+                            onBlur={handleEmailChange} type="email" name="email" id="" className="input-field"
                             placeholder="Email" required />
                         <br />
                         <input
-                            type="password" name="password" id="" className="input-field"
+                            onBlur={handlePasswordChange} type="password" name="password" id="" className="input-field"
                             placeholder="password" required />
+                            <div>
+                            <small className="text-danger">{error}</small>
+                                </div>
                         <br />
 
                         <input type="submit" value="Submit" className="btn-login" />

@@ -13,7 +13,7 @@ const Banner = () => {
                         </h1>
                         <p className="w-75">Online learning gives educators an opportunity to reach students who may not be able to enroll in a traditional classroom course and supports students who need to work on their own schedule and at their own pace.
                         </p>
-                        <Link to="/appointment-form"><button className="btn btn-outline-light rounded-0" type="submit" >Get an Appointment</button></Link>
+                        <Link to="/home"><button className="btn btn-outline-light rounded-0" type="submit" >See More</button></Link>
                     </div>
                     <div>
                         <img src={img} alt="" />

@@ -4,7 +4,6 @@ import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
 import Footer from './Pages/Footer/Footer';
 import Header from './Pages/Header/Header';
-import AppointmentForm from './Pages/Home/Appointment/AppointmentForm/AppointmentForm';
 import Doctors from './Pages/Home/Doctors/Doctors/Doctors';
 import Home from './Pages/Home/Home';
 import ServiceDetail from './Pages/Home/ServiceDetail/ServiceDetail';
@@ -44,9 +43,6 @@ function App() {
             </Route>
             <Route path="/sign-up">
               <SignUp></SignUp>
-            </Route>
-            <Route path="/appointment-form">
-              <AppointmentForm></AppointmentForm>
             </Route>
             <PrivateRoute path="/doctors">
               <Doctors></Doctors>

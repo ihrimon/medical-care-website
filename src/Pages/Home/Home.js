@@ -1,5 +1,4 @@
 import React from 'react';
-import Appointment from './Appointment/Appointment';
 import Banner from './Banner/Banner';
 import FindDoctors from './Doctors/FindDoctors';
 import Faqs from './FAQ\'s/Faqs';
@@ -11,7 +10,6 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Services></Services>
-            <Appointment></Appointment>
             <FindDoctors></FindDoctors>
             <Faqs></Faqs>
             <Testimonial></Testimonial>
