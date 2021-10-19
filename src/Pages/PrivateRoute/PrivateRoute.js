@@ -5,10 +5,10 @@ import useAuth from '../../Hooks/useAuth';
 
 
 const PrivateRoute = ({ children, ...rest }) => {
-    const { user, isLoading} = useAuth();
+    const { user, isLoading } = useAuth();
     if (isLoading) {
         return (
-            <div className="spinner-grow text-success" role="status">
+            <div className="d-flex justify-content-center spinner-grow text-success text-center" role="status">
                 <span className="visually-hidden">Loading...</span>
             </div>
         )

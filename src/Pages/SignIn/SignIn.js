@@ -43,7 +43,7 @@ const SignIn = () => {
                 <div className="bg-sign-in col-md-5 text-light text-center p-5">
                     <h2>Hello, Friend</h2>
                     <p>Enter your personal details and start journey with us.</p>
-                    <Link to="/sign-up"><button className="btn btn-outline-light w-100" type="submit" >Sign Up</button></Link>
+                    <Link to="/sign-up"><button className="btn btn-outline-light w-75" type="submit" >Sign Up</button></Link>
                 </div>
             </div>
         </div>
