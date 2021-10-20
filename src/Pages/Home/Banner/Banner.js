@@ -16,7 +16,7 @@ const Banner = () => {
                         <Link to="/home"><button className="btn btn-outline-light rounded-0" type="submit" >See More</button></Link>
                     </div>
                     <div>
-                        <img src={img} alt="" />
+                        <img src={img} className="w-100" alt="" />
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, createUserWithEmailAndPassword, signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from '../Firebase/firebase.init';
 
@@ -13,6 +13,7 @@ const useFirebase = () => {
 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
+    const githubprovider = new GithubAuthProvider();
 
     const signInWithGoogle = () => {
         setIsLoading(true);
@@ -23,6 +24,15 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     };
 
+    const signInWithGithub = () => {
+        setIsLoading(true);
+        signInWithPopup(auth, githubprovider)
+            .then(result => {
+                setUser(result.user);
+            })
+            .finally(() => setIsLoading(false));
+    }
+
     const handleEmailChange = e => {
         setEmail(e.target.value);
     }
@@ -31,23 +41,32 @@ const useFirebase = () => {
     }
     const handleRegistration = e => {
         e.preventDefault();
-        console.log(email, password);
         if (password.length < 6) {
             setError('Password At Least 6 Character')
             return;
         }
         if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
-            setError('Password Must contain 3 upper case');
+            setError('Password Must contain 2 upper case');
             return;
         }
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
             })
             .catch(error => {
                 setError(error.message)
             });
+    }
+
+    const handleSignIn = (email, password) => {
+        signInWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => {
+                setError(error.message);
+            })
     }
 
     const logOut = () => {
@@ -57,7 +76,7 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     };
 
-    // observe user state change
+    // observation to user state change when signIn or signOut
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, user => {
             if (user) {
@@ -77,9 +96,11 @@ const useFirebase = () => {
         isLoading,
         logOut,
         signInWithGoogle,
+        signInWithGithub,
         handleEmailChange,
         handlePasswordChange,
-        handleRegistration
+        handleRegistration,
+        handleSignIn
     }
 };
 

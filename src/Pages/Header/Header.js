@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import logo from '../../images/logo.png';
 import useAuth from '../../Hooks/useAuth'
+import './Header.css';
 
 const Header = () => {
     const { user, logOut } = useAuth();
@@ -40,12 +40,27 @@ const Header = () => {
                                 <NavLink className="nav-link" activeStyle={activeStyle} to="/contact">Contact</NavLink>
                             </li>
                         </ul>
-                        <small>{user?.displayName}</small>
-                        {user.displayName ?
-                            <button onClick={logOut} className="btn btn-outline-success ms-2">Sign Out</button> :
-                            <NavLink to="/sign-in"><button className="btn btn-success me-2" type="submit" >Sign In</button></NavLink>
-                        }
 
+                        <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li className="nav-item">
+                                {
+                                    ((user.displayName) && (user.photoURL)) &&
+                                    <div className="user rounded-pill mx-lg-0 mx-auto py-1 px-2 mt-1 d-flex align-items-center">
+                                        <img src={user.photoURL} className="rounded-pill user-img" alt="" />
+                                        <p className="ms-2 my-2 fw-bold">{user.displayName}</p>
+                                    </div>
+                                }
+                            </li>
+
+                            <li className="nav-item">
+                                <NavLink className="nav-link active" aria-current="page" to="/sign-in">
+                                    {(user.displayName) && (user.photoURL) ?
+                                        <button onClick={logOut} className="btn btn-outline-primary ms-2">Sign Out</button> :
+                                        <NavLink to="/sign-in"><button className="btn btn-primary me-1" type="submit" >Sign In</button></NavLink>
+                                    }
+                                </NavLink>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </nav>

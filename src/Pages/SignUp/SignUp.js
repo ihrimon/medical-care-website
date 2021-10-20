@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const SignUp = () => {
-    const { signInWithGoogle } = useAuth();
+    const { signInWithGoogle, handleEmailChange,
+        handlePasswordChange, handleRegistration, error } = useAuth();
     return (
         <div className="container card w-50 my-5">
             <div className=" row gx-3">
@@ -27,15 +28,21 @@ const SignUp = () => {
                             placeholder="Address" />
                         <br />
                         <input
-                            type="email" name="email" id="" className="input-field"
+                            onBlur={handleEmailChange} type="email" name="email" id="" className="input-field"
                             placeholder="Email" required />
+                        <div>
+                            <small className="text-danger">{error}</small>
+                        </div>
                         <br />
                         <input
-                            type="password" name="password" id="" className="input-field"
+                            onBlur={handlePasswordChange} type="password" name="password" id="" className="input-field"
                             placeholder="password" required />
+                        <div>
+                            <small className="text-danger">{error}</small>
+                        </div>
                         <br />
 
-                        <input type="submit" value="SIGN UP" className="btn-login" />
+                        <input onClick={handleRegistration} type="submit" value="SIGN UP" className="btn-login" />
                         <br />
 
                         <Link to="/sign-in" className="text-login">
