@@ -8,43 +8,43 @@ const Footer = () => {
             <div className="bg-light py-5">
                 <div className="container d-flex flex-wrap text-start">
                     <div className="col-lg-3 col-6">
-                        <NavLink to="#headernpm i react-router-hash-link">
+                        <NavLink to="/">
                             <img src={logo} alt="" />
                         </NavLink>
-                        <p>Online learning gives educators an opportunity to reach students who may not be able to enroll.</p>
+                        <p className="mt-3 w-75">Medical care is what physicians and other clinicians do every day with you in offices, labs, surgery centers, and hospitals. </p>
                     </div>
-                    <div className="col-lg-3 col-6">
-                        <h5>Explore</h5>
+                    <div className="col-lg-3 col-6 px-4">
+                        <h5>Navigation</h5>
                         <ul>
-                            <li>About us</li>
-                            <li>Success Story</li>
-                            <li>Careers</li>
-                            <li>Resource Center</li>
-                            <li>Courses</li>
+                            <li>Home</li>
+                            <li>About Us</li>
+                            <li>Doctors</li>
+                            <li>Blog</li>
+                            <li>Contact</li>
                         </ul>
                     </div>
-                    <div className="col-lg-3 col-6">
-                        <h5>Categories</h5>
+                    <div className="col-lg-3 col-6 px-4">
+                        <h5>Services</h5>
                         <ul>
-                            <li>All Courses</li>
-                            <li>Digital Marketing</li>
-                            <li>Design and Marketing</li>
-                            <li>Veterans</li>
-                            <li>Courses</li>
+                            <li>Cardiology</li>
+                            <li>Dental Surgeon</li>
+                            <li>Neurology</li>
+                            <li>Orthopedics</li>
+                            <li>Pediatric</li>
                         </ul>
                     </div>
-                    <div className="col-lg-3 col-6">
-                        <h5>Support</h5>
+                    <div className="col-lg-3 col-6 px-4">
+                        <h5>Emergency</h5>
                         <ul>
                             <li>Help Center</li>
-                            <li>System Requirements</li>
-                            <li>Register Activation Key</li>
-                            <li>Site Feedback</li>
-                            <li>Forumes</li>
+                            <li>Doctors</li>
+                            <li>Treatments</li>
+                            <li>Surgery</li>
+                            <li>Surgery</li>
                         </ul>
                     </div>
                 </div>
-                <p className="my-5 pb-5 text-center">Copyright@2021 Educato. All Rights Reserved. Create by webpixi author</p>
+                <p className="my-5 pb-5 text-center">Copyright@2021 Medical Care. All Rights Reserved. Create by webpixi author</p>
             </div>
         </div>
     );

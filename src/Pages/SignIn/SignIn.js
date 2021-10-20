@@ -20,9 +20,6 @@ const SignIn = () => {
                         <input
                             onBlur={handleEmailChange} type="email" name="email" id="" className="input-field"
                             placeholder="Email" required />
-                        <div>
-                            <small className="text-danger">{error}</small>
-                        </div>
                         <br />
                         <input
                             onBlur={handlePasswordChange} type="password" name="password" id="" className="input-field"
@@ -32,7 +29,7 @@ const SignIn = () => {
                         </div>
                         <br />
 
-                        <input type="submit" value="Submit" className="btn-login" />
+                        <input type="submit" value="SIGN IN" className="btn-login" />
                         <br />
                         <Link to="/sign-up" className="text-login">
                             Are you a new user?

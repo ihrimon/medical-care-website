@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const SignUp = () => {
-    const { signInWithGoogle, handleEmailChange,
+    const { signInWithGoogle, signInWithGithub, handleEmailChange,
         handlePasswordChange, handleRegistration, error } = useAuth();
     return (
         <div className="container card w-50 my-5">
@@ -18,21 +18,16 @@ const SignUp = () => {
                     <h2>Create an Account</h2>
                     <p>use social account</p>
                     <button onClick={signInWithGoogle} className="btn btn-danger btn-gmail">Gmail</button>
-                    <button className="btn btn-primary btn-github ">Github</button>
+                    <button onClick={signInWithGithub} className="btn btn-primary btn-github ">Github</button>
                     <p>or use your email account</p>
-                    <form>
+                    <form onSubmit={handleRegistration}>
                         <input type="text" name="Name" id="" className="input-field"
                             placeholder="Name" />
-                        <input
-                            type="address" name="address" id="" className="input-field"
+                        <input type="text" name="Address" id="" className="input-field"
                             placeholder="Address" />
-                        <br />
                         <input
                             onBlur={handleEmailChange} type="email" name="email" id="" className="input-field"
                             placeholder="Email" required />
-                        <div>
-                            <small className="text-danger">{error}</small>
-                        </div>
                         <br />
                         <input
                             onBlur={handlePasswordChange} type="password" name="password" id="" className="input-field"
@@ -42,7 +37,7 @@ const SignUp = () => {
                         </div>
                         <br />
 
-                        <input onClick={handleRegistration} type="submit" value="SIGN UP" className="btn-login" />
+                        <input type="submit" value="SIGN UP" className="btn-login" />
                         <br />
 
                         <Link to="/sign-in" className="text-login">

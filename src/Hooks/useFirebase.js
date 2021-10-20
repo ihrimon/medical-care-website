@@ -13,7 +13,7 @@ const useFirebase = () => {
 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
-    const githubprovider = new GithubAuthProvider();
+    const githubProvider = new GithubAuthProvider();
 
     const signInWithGoogle = () => {
         setIsLoading(true);
@@ -21,14 +21,20 @@ const useFirebase = () => {
             .then(result => {
                 setUser(result.user);
             })
+            .catch(error => {
+                setError(error.message)
+            })
             .finally(() => setIsLoading(false));
     };
 
     const signInWithGithub = () => {
         setIsLoading(true);
-        signInWithPopup(auth, githubprovider)
+        signInWithPopup(auth, githubProvider)
             .then(result => {
                 setUser(result.user);
+            })
+            .catch(error => {
+                setError(error.message)
             })
             .finally(() => setIsLoading(false));
     }
@@ -45,28 +51,43 @@ const useFirebase = () => {
             setError('Password At Least 6 Character')
             return;
         }
-        if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
+        else if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
             setError('Password Must contain 2 upper case');
             return;
         }
+        else if (error.message == '(auth/email-already-in-use)') {
+            alert("Oops! email already in use.");
+        }
+
+        else {
+            alert("User has been Created. Please Sign in!");
+        }
+
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
-                const user = result.user;
+                setUser(result.user);
+                setError('');
             })
             .catch(error => {
                 setError(error.message)
             });
     }
 
-    const handleSignIn = (email, password) => {
+    const handleSignIn = (e) => {
+        e.preventDefault();
+
+        // if ((password.length <= 6) && (/(?=.*[A-Z].*[A-Z])/.test(password))) {
+        //     alert("Sign In Successfully.");
+        // }
+
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
-                const user = result.user;
-                console.log(user);
+                setUser(result.user);
+                setError('');
             })
             .catch(error => {
                 setError(error.message);
-            })
+            });
     }
 
     const logOut = () => {
