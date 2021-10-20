@@ -13,7 +13,6 @@
   
   .input-field {
     justify-content: center;
-    width: 400px;
     margin-bottom: 20px;
     background-color: #f7f7f7;
     border: none;
@@ -39,24 +38,20 @@
   }
   
   .btn-gmail {
-    width: 180px;
     background-color: #e84536;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 6px;
     margin-bottom: 20px;
-    margin-right: 10px;
   }
 
   .btn-github {
-    width: 180px;
     background-color: #2dbe7c;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 6px;
     margin-bottom: 20px;
-    margin-left: 10px;
   }
   

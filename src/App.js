@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import AuthProvider from './context/AuthProvider';
 import About from './Pages/About/About';
-import Contact from './Pages/Contact/Contact';
 import Footer from './Pages/Footer/Footer';
 import Header from './Pages/Header/Header';
 import Doctors from './Pages/Home/Doctors/Doctors/Doctors';
@@ -12,6 +11,7 @@ import NotFound from './Pages/NotFound/NotFound';
 import SignIn from './Pages/SignIn/SignIn';
 import SignUp from './Pages/SignUp/SignUp';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+import Faqs from './Pages/Home/FAQ\'s/Faqs';
 
 function App() {
   return (
@@ -35,8 +35,8 @@ function App() {
             <Route path="/about">
               <About></About>
             </Route>
-            <Route path="/contact">
-              <Contact></Contact>
+            <Route path="/faqs">
+              <Faqs></Faqs>
             </Route>
             <Route path="/sign-in">
               <SignIn></SignIn>
