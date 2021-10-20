@@ -15,6 +15,8 @@ const useFirebase = () => {
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
 
+
+    // sign in process with google
     const signInWithGoogle = () => {
         setIsLoading(true);
         signInWithPopup(auth, googleProvider)
@@ -27,6 +29,7 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     };
 
+    // sign in process with github
     const signInWithGithub = () => {
         setIsLoading(true);
         signInWithPopup(auth, githubProvider)
@@ -39,6 +42,7 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     }
 
+    // sign up process with email and password
     const handleEmailChange = e => {
         setEmail(e.target.value);
     }
@@ -63,6 +67,7 @@ const useFirebase = () => {
             alert("User has been Created. Please Sign in!");
         }
 
+        // create account with email and password
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(result.user);
@@ -80,6 +85,7 @@ const useFirebase = () => {
         //     alert("Sign In Successfully.");
         // }
 
+        // sign in with email and password
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(result.user);
